@@ -8,6 +8,6 @@ import (
 
 func main() {
 
-	http.HandleFunc("/makePosty", h.MakePosty)
+	http.HandleFunc("/", h.MakePosty)
 	http.ListenAndServe(":8081", nil)
 }
