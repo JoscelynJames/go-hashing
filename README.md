@@ -1,4 +1,5 @@
-## Clone the repo
+## Hashing SHA512 with Go
+Clone the repo
 
 ``$go run main.go``
 
