@@ -13,7 +13,7 @@ Either curl with the following command
 
 or 
 
-with postmon send as url encoded data with key as password and value and whatever-your-pasword-is
+with postmon send as url encoded data with key as password and value as whatever-your-pasword-is
 
 
 
