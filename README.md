@@ -3,7 +3,8 @@ Clone the repo
 
 ``$go run main.go``
 
-While running the server is listening on 127.0.0.1:8081
+While running the server is listening on 127.0.0.1:8081.
+
 When a connection is made, it pauses current go routine for 5 seconds before continuing
 
 Either curl with the following command 
