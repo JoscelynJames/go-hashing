@@ -5,6 +5,7 @@ import (
 	"io"
 	"crypto/md5"
 	"fmt"
+	"encoding/base64"
 )
 
 func HashItOut(s string) {
@@ -12,5 +13,6 @@ func HashItOut(s string) {
 	io.WriteString(md5, s)
 	sha_512 := sha512.New()
 	sha_512.Write([]byte(s))
-	fmt.Printf("sha512:\t\t%x\n", sha_512.Sum(nil))
+	sha := base64.URLEncoding.EncodeToString(sha_512.Sum(nil))
+	fmt.Println(sha)
 }
