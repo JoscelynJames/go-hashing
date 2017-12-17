@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/joscelynjames/go-hashing/hashing"
 )
 
 func waitFive(done chan bool) {
@@ -13,6 +15,7 @@ func waitFive(done chan bool) {
 }
 
 func MakePosty(w http.ResponseWriter, r *http.Request) {
+	fmt.Println(r.Method)
 	fmt.Println("Inside MakePosty")
 
 	done := make(chan bool)
@@ -20,6 +23,13 @@ func MakePosty(w http.ResponseWriter, r *http.Request) {
 	<-done
 
 	fmt.Println("Go routine finished")
+	fmt.Println("Hashing started")
+
+	r.ParseForm()
+	x := r.Form.Get("password")
+
+	go hashing.HashItOut(x)
+
 }
 
 
