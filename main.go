@@ -18,9 +18,11 @@ func main() {
 	port := ":8081"
 	srv := &http.Server{Addr: port, Handler: mux}
 
-	if err := srv.ListenAndServe(); err != nil {
-		log.Printf("listen: %s\n", err)
-	}
+	go func() {
+		if err := srv.ListenAndServe(); err != nil {
+			log.Printf("listen: %s\n", err)
+		}
+	} ()
 
 	mux.HandleFunc("/", h.MakePosty)
 
