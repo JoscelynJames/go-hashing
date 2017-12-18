@@ -2,9 +2,9 @@ package handlers
 
 import (
 	"fmt"
+	"github.com/joscelynjames/go-hashing/hashing"
 	"net/http"
 	"time"
-	"github.com/joscelynjames/go-hashing/hashing"
 )
 
 func MakePosty(w http.ResponseWriter, r *http.Request) {

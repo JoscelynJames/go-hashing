@@ -22,7 +22,7 @@ func main() {
 		if err := srv.ListenAndServe(); err != nil {
 			log.Printf("listen: %s\n", err)
 		}
-	} ()
+	}()
 
 	mux.HandleFunc("/", h.MakePosty)
 

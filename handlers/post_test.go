@@ -1,21 +1,20 @@
 package handlers
 
 import (
+	"github.com/joscelynjames/go-hashing/hashing"
+	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
-	"testing"
-	"io/ioutil"
-	"strings"
 	"net/url"
-	"github.com/joscelynjames/go-hashing/hashing"
-
+	"strings"
+	"testing"
 )
 
 func TestPostHandler(t *testing.T) {
 	data := url.Values{}
 	data.Set("password", "password")
 
-	r, err := http.NewRequest("POST", "https://test.com", strings.NewReader(data.Encode())) 
+	r, err := http.NewRequest("POST", "https://test.com", strings.NewReader(data.Encode()))
 	if err != nil {
 		t.Error(err)
 	}
