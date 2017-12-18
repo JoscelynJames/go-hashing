@@ -7,6 +7,8 @@ import (
 	"io/ioutil"
 	"strings"
 	"net/url"
+	"github.com/joscelynjames/go-hashing/hashing"
+
 )
 
 func TestPostHandler(t *testing.T) {
@@ -31,7 +33,5 @@ func TestPostHandler(t *testing.T) {
 	if string(body) != expect {
 		t.Errorf("expected body to be password but body was '%s'", string(body))
 	}
-
-
 
 }

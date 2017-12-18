@@ -5,11 +5,16 @@ import (
 	"encoding/base64"
 	"fmt"
 )
-
+// HashItOut function for MakePosty 
 func HashItOut(s string) string {
-	sha_512 := sha512.New()
-	sha_512.Write([]byte(s))
-	sha := base64.URLEncoding.EncodeToString(sha_512.Sum(nil))
-	fmt.Println(sha)
-	return sha
+	if len(s) <= 1 {
+		return "Please enter a password"
+	}
+
+	// create a new sha512
+	sha := sha512.New()
+	// encode the slice of bytes to a base64 string 
+	encoded := base64.URLEncoding.EncodeToString(sha.Sum(nil))
+	fmt.Println("encoded", encoded)
+	return encoded
 }
