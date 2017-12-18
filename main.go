@@ -17,8 +17,6 @@ func main() {
 	mux := http.NewServeMux()
 	port := ":8081"
 	srv := &http.Server{Addr: port, Handler: mux}
-	// dont need go func 
-	// wrap in panic
 
 	if err := srv.ListenAndServe(); err != nil {
 		log.Printf("listen: %s\n", err)
