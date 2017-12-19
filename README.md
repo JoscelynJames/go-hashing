@@ -1,5 +1,5 @@
-### Hashing SHA512 and base64 with Go
-## This program uses only the standard library so no need to ``$go get ...`` anything 
+## Hashing SHA512 and base64 with Go
+### This program uses only the standard library so no need to ``$go get ...`` anything 
 
 Clone the repo
 cd into the directory and run the following command 
